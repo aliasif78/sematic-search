@@ -1,0 +1,70 @@
+ySQL compatibility
+The two main features that distinguish MariaDB and MySQL from PostgreSQL are the usage of threads instead of processes, and integrated, wide support for replication setups, both local and global. This includes geo-distributed replication and multi-master setups via Galera Cluster.[35][36]
+
+MariaDB's API and protocol are compatible with those used by MySQL, including support for native non-blocking operations and progress reporting. Most connectors, libraries, and applications built for MySQL work with MariaDB. The official MariaDB connectors are licensed under the LGPL, permitting use in commercial applications without copyleft requirements, and are widely used by OS distributions to connect to both MariaDB and MySQL.[37]
+
+The on-disk format of MySQL and MariaDB were identical up to MySQL 5.7. MySQL 8.0 changed the on-disk format, including removing the .frm schema files, changing the default authentication protocol, and removing and changing several other features, meaning that moving data between MySQL 8.0+ and MariaDB requires a dump and restore. All main user-visible features largely share the same syntax, making it relatively straightforward to migrate from MySQL to MariaDB. Replication between MySQL and MariaDB in both directions remains possible.[38]
+
+Some features diverge further, including GTID replication format and JSON storage implementation.[39]
+
+MariaDB includes a built-in thread pool in all editions, including the community release, managing connections through a small pool of worker threads rather than a one-thread-per-connection model. MySQL's thread pool is available only in the commercial MySQL Enterprise Edition.[40][41][42]
+
+Oracle compatibility
+Oracle compatibility mode (sql_mode=ORACLE), available since MariaDB 10.3. The mode is designed to support incremental migration from Oracle Database, allowing applications to be ported on a per-feature or per-application basis rather than requiring a complete rewrite. Oracle mode enables PL/SQL stored procedure syntax, Oracle-compatible NULL handling, and Oracle-style functions including NVL() and DECODE(). In many cases, Oracle applications can be run unchanged with MariaDB by replacing Oracle's ODBC or JDBC connector with the MariaDB connector.[43] Oracle mode was originally developed in collaboration with DBS Bank.[44][45][46]
+
+Sequences, created with CREATE SEQUENCE, are first-class database objects independent of any specific table, supporting descending sequences and fine-grained caching control; MySQL has no equivalent CREATE SEQUENCE statement.[47][48]
+
+Transactions and concurrency
+MariaDB provides fully ACID-compliant transactions with support for multiple isolation levels: read uncommitted, read committed, repeatable read, and serialisable. The default storage engine, InnoDB, implements multiversion concurrency control (MVCC), allowing readers and writers to operate concurrently without blocking each other.[49] From MariaDB 11.8, snapshot isolation defaults to strict mode, ensuring transactions see a consistent view of the database from their start time.
+
+Storage engines
+MariaDB supports a pluggable storage engine architecture, allowing different engines to be selected per table to match workload requirements — a broader range than the InnoDB-focused default of MySQL.[50]
+
+InnoDB — the default engine, providing ACID-compliant transactions, row-level locking, foreign key support, and crash recovery.
+Aria — a crash-safe engine used internally for temporary tables and system tables, with crash recovery through a write-ahead transaction log.[51]
+MyRocks — based on RocksDB, a log-structured merge-tree engine developed by Meta, offering higher write throughput and better compression for write-heavy workloads.[52]
+Heap/Memory — an in-memory storage engine for fast temporary data storage; data is lost on server restart.[53]
+Spider — a sharding engine that distributes data across multiple MariaDB instances, allowing them to be queried transparently as a single table; supports partitioning and XA transactions.[54]
+CONNECT — allows MariaDB to query external data sources including CSV, ODBC, JDBC, MongoDB, and other formats as standard SQL tables.[55]
+DuckDB — a pluggable storage engine that brings DuckDB's columnar analytical engine inside MariaDB Server.[56][57]
+Pluggable architecture
+Beyond storage engines, MariaDB has a set of pluggable APIs. Plugin categories include:
+
+Authentication methods
+Full-text search — including Mroonga for CJK languages
+Audit — logging database activity for security and compliance
+Encryption key management — including integration with HashiCorp Vault and AWS Key Management
+Monitoring and statistical plugins
+Password validation
+Handler socket — a high-speed API for using InnoDB tables as a key–value store
+Compression methods — bzip2, lz4, lzma, lzo, and snappy
+Pluggable data types — including inet, json, uuid, and mysql_json
+User-defined functions — loadable in C, C++, or Rust. Both simple and group-by functions are supported.
+Plugins can be loaded or replaced at runtime without rebuilding the server.[58]
+
+Analytics
+MariaDB supports analytical workloads through ColumnStore, a columnar storage engine that stores data by column rather than by row, reducing I/O for aggregation queries and making it suited to data warehouse and business intelligence use cases.[59] Standard SQL analytical capabilities including window functions and common table expressions are supported across all storage engines. The MariaDB Enterprise edition from MariaDB plc can use Exasol to speed up analytical queries.[60]
+
+SQL language
+MariaDB supports standard SQL including stored procedures, functions, triggers, views, window functions, and the JSON data type with a comprehensive set of document storage and querying functions.
+
+System-versioned tables, conforming to the SQL:2011 standard, automatically record the complete history of every row. Historical data can be queried using the FOR SYSTEM_TIME AS OF clause to retrieve the state of a table at any past point in time, without manually maintained audit tables or triggers.[61]
+
+The INSTANT algorithm for ALTER TABLE allows column additions, drops, and default changes to complete in microseconds by updating only metadata, without rebuilding the table. Since MariaDB 11.2, non-instant schema changes run non-blocking by default, allowing concurrent reads and writes during the operation.[62]
+
+Replication and high availability
+MariaDB supports primary-replica replication using a binary log, with asynchronous and semi-synchronous modes. Multi-source replication allows a replica to receive changes from multiple primary servers simultaneously, and parallel replication reduces lag by applying changes concurrently.
+
+Galera Cluster is a synchronous multi-master replication solution built directly into the MariaDB server, allowing writes to any node while maintaining consistency across the cluster.[63]
+
+Security
+MariaDB supports role-based access control, allowing sets of privileges to be assigned to named roles and granted to users, simplifying permission management in large deployments.[64]
+
+Authentication is handled through a plugin architecture supporting multiple methods, including mysql_native_password, ED25519 using elliptic-curve cryptography,[65] and PARSEC (Password Authentication using Response Signed with Elliptic Curve), introduced in MariaDB 11.6. MariaDB supports table-level encryption and integration with HashiCorp Vault for key management.
+
+Connectivity
+MariaDB provides official connectors for C, C++, Java, Python, Node.js, ODBC, and R2DBC, licensed under the LGPL, permitting use in commercial applications without copyleft requirements.[66] MariaDB uses the MySQL client–server protocol, maintaining wire-level compatibility with MySQL client libraries.
+
+AI and vector search
+MariaDB 11.7 introduced a native VECTOR data type with HNSW indexing for nearest neighbour search, enabling vector database workloads including retrieval-augmented generation (RAG) without requiring a separate extension or plugin. The implementation uses SIMD hardware acceleration (AVX2 and AVX512 on x86; NEON on ARM) and became generally available in MariaDB 11.8 LTS in May 2025.[67] MariaDB Vector is integrated with major AI application frameworks including LangChain, LlamaIndex, Spring AI, and LangChain4j.[68] MySQL Community Edition has supported the VECTOR data type since MySQL 9.0 but not vector search indexes.[69]
+
