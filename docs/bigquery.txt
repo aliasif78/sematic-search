@@ -1,0 +1,14 @@
+BigQuery is a managed, serverless data warehouse product by Google, offering scalable analysis over large quantities of data. It is a Platform as a Service (PaaS) that supports querying using a dialect of SQL and Graph Query Language[1]. It also has built-in machine learning capabilities. BigQuery was announced in May 2010 and made generally available in November 2011.[2]
+
+History
+BigQuery originated from Google's internal Dremel technology,[3][4] which enabled quick queries across trillions of rows of data.[5] The product was originally announced in May 2010 at Google I/O.[6] Initially, it was only usable by a limited number of external early adopters due to limitations on the API.[5] However, after the product proved its potential, it was released for limited availability in 2011 and general availability in 2012.[5] After general availability, BigQuery found success among a broad range of customers, including airlines, insurance, and retail organizations.[5]
+
+Design
+BigQuery requires all requests to be authenticated, supporting a number of Google-proprietary mechanisms as well as OAuth.
+
+Features
+Managing data - Create and delete objects such as tables, views, and user defined functions. Import data from Google Storage in formats such as CSV, Parquet, Avro or JSON.
+Query - Queries are expressed in a SQL dialect[7] and the results are returned in JSON with a maximum reply length of approximately 128 MB, or an unlimited size when large query results are enabled.[8]
+Integration - BigQuery can be used from Google Apps Script[9] (e.g. as a bound script in Google Docs), or any language that can work with its REST API or client libraries.[10]
+Access control - Share datasets with arbitrary individuals, groups, or the world.
+Machine learning - Create and execute machine learning models using SQL queries.
