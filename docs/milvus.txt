@@ -1,0 +1,60 @@
+Similarity search
+Various similarity search-related features are available in Milvus:[7]
+
+In-memory, on-disk and GPU indices,
+Single query, batch query and range query search,
+Support of sparse vectors, binary vectors, JSON and arrays,
+FP32, FP16 and BF16 data types,
+Euclidean distance, inner product distance and cosine distance support for floating-point data,
+Hamming distance and jaccard distance for binary data,
+Support of graph indices (including HNSW), Inverted-lists based indices and a brute-force search.
+Support of vector quantization for lossy input data compression, including product quantization (PQ) and scalar quantization (SQ), that trades stored data size for accuracy,
+Re-ranking.
+Milvus' similarity search engine relies on modified forks of third-party open-source similarity search libraries, such as Faiss,[8][9] DiskANN[10][11] (including the AiSAQ [12] technology from KIOXIA) and hnswlib.[13]
+
+Milvus includes optimizations for I/O data layout, specific to graph search indices.[14]
+
+Database
+As a database, Milvus provides the following features:[7]
+
+Support for column-oriented databases
+Four supported data consistency levels, including strong consistency and eventual consistency[15]
+Data sharding
+Streaming data ingestion, which allows processing and ingestion of data in real-time as it arrives
+A dynamic schema, which allows insertion of data without a predefined schema
+Independent storage and compute layers
+Support for multi-tenancy scenarios (database-oriented, collection-oriented, partition-oriented)[16]
+Memory-mapped data storage
+Role-based access control
+Multi-vector and hybrid search[17]
+Milvus 3.0 introduces the following features:
+
+Snapshots
+Nullable vector fields
+Evaluation rollbacks
+Data lake
+Milvus 3.0 introduces the following[18] large scale operations, applicable for vectors:
+
+Data deduplication
+Clustering
+Anomaly detection
+Deployment options
+Milvus can be deployed as an embedded database, standalone server, or distributed cluster. Zilliz Cloud offers a fully managed version.[19]
+
+GPU support
+Milvus provides GPU accelerated index building and search using Nvidia CUDA technology[20][21] via the Nvidia cuVS library,[22] including the GPU-based graph indexing algorithm CAGRA.[23]
+
+Integration
+Milvus provides official SDK clients for Java, NodeJS, Python and Go.[24] An additional C# SDK client was contributed by Microsoft.[7][25] The database can integrate with DataDog,[26] Prometheus and Grafana for monitoring and alerts, as well as generative AI frameworks Haystack,[27] LangChain,[28] IBM Watsonx,[29] and those provided by OpenAI.[30][31]
+
+Several storage providers have built integrations with Milvus to support AI workloads and large-scale vector search. These integrations aim to optimize performance, simplify inferencing workflows, and enhance data management capabilities:
+
+Pure Storage[32]
+Cloudian[33]
+Weka.io[34]
+DDN[35]
+Hitachi[36]
+NetApp[37]
+Nutanix[38][39]
+Milvus is included in the SUSE AI platform product.[40] [41] Red Hat OpenShift AI self-managed product supports deploying Milvus.[42]
+
