@@ -50,7 +50,7 @@ async function ingestFile(filename: string): Promise<IngestResult> {
   let embedding: number[];
   try {
     const result = await embed({
-      model: google.textEmbeddingModel(EMBEDDING_MODEL),
+      model: google.embeddingModel(EMBEDDING_MODEL),
       value: content,
       providerOptions: {
         google: {
