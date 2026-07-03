@@ -1,0 +1,22 @@
+Features
+SQLite implements most of the SQL-92 standard for SQL, but lacks some features. For example, it only partially provides triggers and cannot write to views (however, it provides INSTEAD OF triggers that provide this functionality). Its support of ALTER TABLE statements is limited.[26]
+
+SQLite uses an unusual type system for an SQL-compatible DBMS: instead of assigning a type to a column as in most SQL database systems, types are assigned to individual values; in language terms it is dynamically typed. Moreover, it is weakly typed in some of the same ways that Perl is: one can insert a string into an integer column (although SQLite will try to convert the string to an integer first, if the column's preferred type is integer). This adds flexibility to columns, especially when bound to a dynamically typed scripting language. However, the technique is not portable to other SQL products. A common criticism is that SQLite's type system lacks the data integrity mechanism provided by statically typed columns, although it can be emulated with constraints like CHECK(typeof(x)='integer').[12] In 2021, support for static typing was added through STRICT tables, which enforce datatype constraints for columns.[27]
+
+Tables normally include a hidden rowid index column, which provides faster access.[28] If a table includes an INTEGER PRIMARY KEY column, SQLite will typically optimize it by treating it as an alias for the rowid, causing the contents to be stored as a strictly typed 64-bit signed integer and changing its behavior to be somewhat like an auto-incrementing column. SQLite includes an option to create a table without a rowid column, which can save disk space and improve lookup speed. WITHOUT ROWID tables are required to have a primary key.[29]
+
+SQLite supports foreign key constraints,[30][31] although they are disabled by default and must be manually enabled with a PRAGMA statement.[32]
+
+Stored procedures are not supported; this is an explicit choice by the developers to favor simplicity, as the typical use case of SQLite is to be embedded inside a host application that can define its own procedures around the database.[33]
+
+SQLite does not have full Unicode support by default for backwards compatibility and due to the size of the Unicode tables, which are larger than the SQLite library.[34] Full support for Unicode case-conversions can be enabled through an optional extension.[35]
+
+SQLite supports full-text search through its FTS5 loadable extension, which allows users to efficiently search for a keyword in a large number of documents similar to how search engines search webpages.[36]
+
+SQLite includes support for working with JSON through its json1 extension, which is enabled by default since 2021. SQLite's JSON functions can handle JSON5 syntax since 2023. In 2024, SQLite added support for JSONB, a binary serialization of SQLite's internal representation of JSON. Using JSONB allows applications to avoid having to parse the JSON text each time it is processed and saves a small amount of disk space.[37]
+
+In May 2025, the 25th‑anniversary release SQLite 3.50.0 introduced additional features, including new Unicode functions (unistr() and unistr_quote()), a new API (sqlite3_setlk_timeout()) for setting lock timeouts, improved command‑line tools and rsync utility enhancements, and optimized JSONB.[38]
+
+The maximum supported size for an SQLite database file is 281 terabytes.[39]
+
+SQLite normally stores every table and index in a SQLite database in a single ordinary disk file. Alternatively, SQLite can be told to keep a SQL database entirely in memory as an in-memory database with the :memory: connection string.[40]

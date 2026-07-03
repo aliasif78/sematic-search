@@ -1,0 +1,14 @@
+Azure Cosmos DB is a globally distributed, multi-model database service offered by Microsoft. It is designed to provide high availability, scalability, and low-latency access to data for modern applications. Unlike traditional relational databases, Cosmos DB is a NoSQL (meaning "Not only SQL", rather than "zero SQL") and vector database,[1] which means it can handle unstructured, semi-structured, structured, and vector data types.[2]
+
+Data model
+Internally, Cosmos DB stores "items" in "containers",[3] with these two concepts being surfaced differently depending on the API used (these would be "documents" in "collections" when using the MongoDB-compatible API, for example). Containers are grouped in "databases", which are analogous to namespaces above containers. Containers are schema-agnostic, which means that no schema is enforced when adding items.
+
+By default, every field in each item is automatically indexed, generally providing good performance without tuning to specific query patterns. These defaults can be modified by setting an indexing policy which can specify, for each field, the index type and precision desired. Cosmos DB offers two types of indexes:
+
+range, supporting range and ORDER BY queries
+spatial, supporting spatial queries from points, polygons, and line strings encoded in standard GeoJSON fragments
+Containers can also enforce unique key constraints to ensure data integrity.[4]
+
+Each Cosmos DB container exposes a change feed, which clients can subscribe to in order to get notified of new items being added or updated in the container.[5] As of 7 June 2021, item deletions are currently not exposed by the change feed. Changes are persisted by Cosmos DB, which makes it possible to request changes from any point in time since the creation of the container.
+
+A "Time to Live" (or TTL) can be specified at the container level to let Cosmos DB automatically delete items after a certain amount of time expressed in seconds. This countdown starts after the last update of the item. If needed, the TTL can also be overloaded at the item level.

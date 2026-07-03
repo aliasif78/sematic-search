@@ -1,0 +1,64 @@
+MySQL was created by a Swedish company, MySQL AB, founded by Swedes David Axmark and Allan Larsson, along with Finn Michael "Monty" Widenius. Original development of MySQL by Widenius and Axmark began in 1994.[24] The first version of MySQL appeared on 23 May 1995. It was initially created for personal usage from mSQL based on the low-level language ISAM, which the creators considered too slow and inflexible. They created a new SQL interface, while keeping the same API as mSQL. By keeping the API consistent with the mSQL system, many developers were able to use MySQL instead of the (proprietarily licensed) mSQL antecedent.[25]
+
+Milestones
+Additional milestones in MySQL development included:
+
+First internal release on 23 May 1995
+Version 3.19: End of 1996, from www.tcx.se
+Version 3.20: January 1997
+Windows version was released on 8 January 1998 for Windows 95 and NT
+Version 3.21: production release 1998, from www.mysql.com
+Version 3.22: alpha, beta from 1998
+Version 3.23: beta from June 2000, production release 22 January 2001[26]
+Version 4.0: beta from August 2002, production release March 2003 (unions).
+Version 4.1: beta from June 2004, production release October 2004 (R-trees and B-trees, subqueries, prepared statements).
+Version 5.0: beta from March 2005, production release October 2005 (cursors, stored procedures, triggers, views, XA transactions).
+The developer of the Federated Storage Engine states that "The Federated Storage Engine is a proof-of-concept storage engine",[27] but the main distributions of MySQL version 5.0 included it and turned it on by default. Documentation of some of the short-comings appears in "MySQL Federated Tables: The Missing Manual".[28]
+Sun Microsystems acquired MySQL AB in 2008.[29]
+Version 5.1: production release 27 November 2008 (event scheduler, partitioning, plugin API, row-based replication, server log tables)
+Version 5.1 contained 20 known crashing and wrong result bugs in addition to the 35 present in version 5.0 (almost all fixed as of release 5.1.51).[30]
+MySQL 5.1 and 6.0-alpha showed poor performance when used for data warehousing – partly due to its inability to utilize multiple CPU cores for processing a single query.[31]
+Oracle acquired Sun Microsystems on 27 January 2010.[32][33][34]
+The day Oracle announced the purchase of Sun, Michael "Monty" Widenius forked MySQL, launching MariaDB, and took a swath of MySQL developers with him.[35]
+
+Geir Høydalsvik, current Senior Software Development Director for MySQL at Oracle in 2018
+MySQL Server 5.5 was generally available (as of December 2010). Enhancements and features include:
+The default storage engine is InnoDB, which supports transactions and referential integrity constraints.
+Improved InnoDB I/O subsystem[36]
+Improved SMP support[37]
+Semisynchronous replication.
+SIGNAL and RESIGNAL statement in compliance with the SQL standard.
+Support for supplementary Unicode character sets utf16, utf32, and utf8mb4.[a]
+New options for user-defined partitioning.
+MySQL Server 6.0.11-alpha was announced[38] on 22 May 2009 as the last release of the 6.0 line. Future MySQL Server development uses a New Release Model. Features developed for 6.0 are being incorporated into future releases.
+The general availability of MySQL 5.6 was announced in February 2013.[39] New features included performance improvements to the query optimizer, higher transactional throughput in InnoDB, new NoSQL-style memcached APIs, improvements to partitioning for querying and managing very large tables, TIMESTAMP column type that correctly stores milliseconds, improvements to replication, and better performance monitoring by expanding the data available through the PERFORMANCE_SCHEMA.[40] The InnoDB storage engine also included support for full-text search and improved group commit performance.
+The general availability of MySQL 5.7 was announced in October 2015.[41] As of MySQL 5.7.8, August 2015,[42] MySQL supports a native JSON data type defined by RFC 7159.[43][44]
+MySQL Server 8.0 was announced in April 2018,[45] including NoSQL Document Store, atomic and crash safe DDL sentences and JSON Extended syntax, new functions, such as JSON table functions, improved sorting, and partial updates. Previous MySQL Server 8.0.0-dmr (Milestone Release) was announced 12 September 2016.[46]
+MySQL was declared DBMS of the year 2019 from the DB-Engines ranking.[47]
+Release history
+Release	General availability	Latest minor version	Latest release	End of support[48][49]
+5.1 LTS	14 November 2008; 17 years ago[50]	5.1.73[51]	2013-12-03	Dec 2013
+5.5 LTS	3 December 2010; 15 years ago[52]	5.5.62[53]	2018-10-22	Dec 2018
+5.6 LTS	5 February 2013; 13 years ago[54]	5.6.51[55]	2021-01-20	Feb 2021
+5.7 LTS	21 October 2015; 10 years ago [56]	5.7.44[57]	2023-10-25	Oct 2023
+8.0 LTS	19 April 2018; 8 years ago [58]	8.0.46[59]	2026-04-21	Apr 2026
+8.1 IR	18 July 2023; 2 years ago[60]	8.1.0[61]	2023-07-18	Oct 2023
+8.2 IR	25 October 2023; 2 years ago[62]	8.2.0[63]	2023-10-25	Jan 2024
+8.3 IR	16 January 2024; 2 years ago[64]	8.3.0[65]	2024-01-16	Apr 2024
+8.4 LTS	30 April 2024; 2 years ago [66]	8.4.9[67]	2026-04-21	Apr 2032
+9.0 IR	1 July 2024; 23 months ago [68]	9.0.1[69]	2024-07-23	Oct 2024
+9.1 IR	15 October 2024; 20 months ago [70]	9.1.0[71]	2024-10-15	Jan 2025
+9.2 IR	21 January 2025; 17 months ago [72]	9.2.0[73]	2025-01-21	Apr 2025
+9.3 IR	15 April 2025; 14 months ago [74]	9.3.0[75]	2025-04-15	Jul 2025
+9.4 IR	22 July 2025; 11 months ago [76]	9.4.0[77]	2025-07-22	Oct 2025
+9.5 IR	10 October 2025; 8 months ago [78]	9.5.0[79]	2025-10-10	Jan 2026
+9.6 IR	20 January 2026; 5 months ago [80]	9.6.0[81]	2026-01-20	Apr 2026
+9.7 LTS	21 April 2026; 2 months ago [82]	9.7.0[83]	2026-04-21	Apr 2034
+Legend:
+Unsupported
+Supported
+Latest version
+Preview version
+LTS = Long-Term Support (every two years)
+IR = Innovation Release (every three months)
+Work on version 6 stopped after the Sun Microsystems acquisition. The MySQL Cluster product uses version 7. The decision was made to jump to version 8 as the next major version number.[84]

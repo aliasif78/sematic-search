@@ -1,0 +1,25 @@
+It was originally created in 1983 by Precision Software for the Commodore 64 and 128 and later the Amiga and Atari ST. In 1989, it was the first database management system to run on a Windows computer.
+
+Precision Software, a UK-based company, was the original creator of the product Superbase. Superbase was and still is used by a large number of people on various platforms. It was often used only as an end-user database but a very large number of applications were built throughout industry, government, and academia and these were often of significant complexity. Some of these applications continue in use to the current day, mostly in small businesses.
+
+The initial versions were text mode only, but with the release of the Amiga version, Superbase became the first product to use the now common VCR control panel for browsing through records.[citation needed] It also supported a number of different media formats, including images, sounds, and video. Superbase was often referred to as the multimedia database in early years, when such features were uncommon. The Amiga version also featured an internal language and the capability to generate front end "masks" for queries and reports, years before Microsoft Access.
+
+This version was a huge success and that resulted in a version being created for a number of platforms using the same approach. Eventually a Microsoft Windows version was released and a couple of years later the company was sold by its founders to Software Publishing Corporation. SPC sold off the non-Windows versions of the product and after releasing version 2 and in the late alpha stages of version 3, sold the product to a company called Computer Concepts Corporation.
+
+This relatively unknown company created a subsidiary called Superbase, Inc. and after finishing off the late stage alpha of version 3 and launching it as Superbase 95, eventually appeared to have lost interest in the product, at which point it was bought by a small group of former customers and brought back to the UK. This company, Superbase Developers plc, continued to extend and support the product through Superbase Classic. The Amiga version was sold to Mr. Hardware Computers. Joe Rothman developed and renamed the program to SBase Pro 4. Mr Hardware Computers and SBase Pro 4 were sold to Russ Norrby who put out version 1.36n being the newest version.
+
+A new, next-generation rewrite of the product initially called Superbase Next Generation (SBNG) which included a new object-oriented programming language called SIMPOL was begun in 1999–2000. It had primarily been an alpha product; although it was billed as a beta release in 2005 with promises that a true release would be around the corner.
+
+In 2006, SIMPOL was sold to RealBasics Ltd which was later renamed Simpol Ltd (www.simpol.com).
+
+In April 2009 this company launched SIMPOL Professional, which is the next generation product, as a cross-platform language and database tool set.
+
+In February 2009, it was announced that Superbase Developers plc was in liquidation.
+
+In March 2010 Papatuo Holdings Ltd. purchased the Superbase family of products from the official receivers of Superbase Developers plc.[1]
+
+In 2014, Pap Holdings (formerly Papatuo Holdings) the company that purchased the Superbase intellectual property when Superbase Developers plc was liquidated in 2010 also purchased the SIMPOL intellectual property upon the liquidation of Simpol Limited.[1] Following versions, 1.83 through 2.06, version 2.10 was released in July 2017.
+
+In August 2018, Superbase Software Limited released a free for non-commercial version.[2]
+
+Since the passing of a lead developer, the project has been on hold, but the developers are working on version 3.0.[3]

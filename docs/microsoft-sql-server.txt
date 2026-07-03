@@ -1,0 +1,31 @@
+Microsoft SQL Server is a proprietary relational database management system developed by Microsoft using Structured Query Language (SQL, often pronounced "sequel"). As a database server, it is a software product with the primary function of storing and retrieving data as requested by other software applications—which may run either on the same computer or on another computer across a network (including the Internet). Microsoft markets at least a dozen different editions of Microsoft SQL Server, aimed at different audiences and for workloads ranging from small single-machine applications to large Internet-facing applications with many concurrent users.
+
+History
+Main article: History of Microsoft SQL Server
+The history of Microsoft SQL Server begins with the first Microsoft SQL Server product—SQL Server 1.0, a 16-bit server for the OS/2 operating system in 1989—and extends to the current day. Its name is entirely descriptive, it being server software that responds to queries in the SQL language.
+
+Milestones
+MS SQL Server for OS/2 began as a project to port Sybase SQL Server onto OS/2 in 1989, by Sybase, Ashton-Tate, and Microsoft.
+SQL Server 4.2 for NT is released in 1993, marking the entry onto Windows NT.
+SQL Server 6.0 is released in 1995, marking the end of collaboration with Sybase; Sybase would continue developing their own variant of SQL Server, Sybase Adaptive Server Enterprise, independently of Microsoft.
+SQL Server 7.0 is released in 1998, marking the conversion of the source code from C to C++.
+SQL Server 2000, released in 2000. SQL Server 2000 SQL Server 8 SQL Server 8.0 codename Shiloh Release date: 2000-11-30.
+SQL Server 2005, released in 2005, finishes the complete revision of the old Sybase code into Microsoft code.
+SQL Server 2008, released in 2008, supports hierarchical data, adds FILESTREAM and SPATIAL data types.
+SQL Server 2012, released in 2012, adds columnar in-memory storage aka xVelocity.
+SQL Server 2017, released in 2017, adds Linux support for these Linux platforms: Red Hat Enterprise Linux, SUSE Linux Enterprise Server, Ubuntu & Docker Engine.[5]
+SQL Server 2019, released in 2019, adds Big Data Clusters, enhancements to the "Intelligent Database", enhanced monitoring features, updated developer experience, and updates/enhancements for Linux based installations.[6]
+SQL Server 2022, released in 2022.
+SQL Server 2025, released in 2025.
+Currently
+As of November 2025, the following versions are supported by Microsoft:[7]
+
+SQL Server 2016
+SQL Server 2017
+SQL Server 2019
+SQL Server 2022
+SQL Server 2025
+
+From SQL Server 2016 onward, the product is supported on x64 processors only and must have 1.4 GHz processor as a minimum, 2.0 GHz or faster is recommended.[8]
+
+The current version is Microsoft SQL Server 2025, released November 18, 2025. The RTM version is 17.0.1000.7.[9]

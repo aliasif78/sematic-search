@@ -1,0 +1,23 @@
+Neo4j is developed by Neo4j, Inc., headquartered in San Mateo, California, United States, with locations in Sweden, Germany, the United Kingdom, France, Singapore, and Australia.
+
+The company was founded in 2007 in Sweden as an open source project by Emil Eifrem, Johan Svensson, and Peter Neubauer, but the idea for the company dates back to a drawing Eifrem sketched on the back of his napkin during a flight in 2000.[11][3][13]
+
+Neo4j was developed as an alternative to traditional tabular databases for use cases in which data relationships are central to the structure and querying of information.[14] It is used in applications such as AI systems, recommendation engines, fraud detection, supply chain, and pharmaceutical research, where traversing relationships between data points is a requirement.[15][16]
+
+The name combines "Neo," meaning "new," with "4j," a naming convention in the Java community meaning "for Java."[17][18] The project was originally called “Project Neo,” and the name Neo4j was adopted when the company was formed.[18][19] The company helped popularize the term “graph database,” thus creating a new market category.[20]
+
+In 2011, the company relocated to Silicon Valley, while its engineering hub remained in Sweden.[3][13]
+
+In 2016, the Neo4j graph database was used in the analysis of the Panama Papers, a data leak that exposed how wealthy individuals and organizations used offshore financial structures to manage and conceal assets.[21][22]
+
+In 2017, NASA acknowledged Neo4j’s contribution to Project Orion for its use in retrieving missing data from the Apollo program.[23]
+
+In 2018, the company launched its Graphs4Good program to support social impact and non-corporate use cases.[24]
+
+During the COVID-19 pandemic, Neo4j supported vaccine product development.[25]
+
+Neo4j surpassed $200 million in revenue in 2024,[3] and in 2025, it was reported that 84 of the Fortune 100 and over half of the Fortune 500 use Neo4j’s software to build, orchestrate, and deploy graph databases, including in AI systems at Uber, Walmart, and Daimler Truck.[12][26]
+
+In 2025, Neo4j announced a $100 million investment in generative AI, including a startup program supporting 1,000 AI-focused companies worldwide; program members include Medium, Shutl (acquired by eBay), and SOUQ (acquired by Amazon).[27][13] In 2026, the company announced its acquisition of GraphAware, an intelligence analysis software provider for government agencies, as part of its AI investment.[28]
+
+Neo4j participates in the AI Alliance and engages with Linux Foundation projects focused on open-source data and AI ecosystems.[29][30]

@@ -1,0 +1,33 @@
+Ad-hoc queries
+MongoDB implements its own query language called Mongo Query Language (MQL).[23] MongoDB supports field, range query and regular-expression searches.[24] Queries can return specific fields of documents and also include user-defined JavaScript functions. Queries can also be configured to return a random sample of results of a given size.
+
+Indexing
+Fields in a MongoDB document can be indexed with primary and secondary indices.
+
+Replication
+MongoDB provides high availability with replica sets.[25] A replica set consists of two or more copies of the data. Each replica-set member may act in the role of primary or secondary replica at any time. All writes and reads are done on the primary replica by default. Secondary replicas maintain a copy of the data of the primary using built-in replication. When a primary replica fails, the replica set automatically conducts an election process to determine which secondary should become the primary. Secondaries can optionally serve read operations, but that data is only eventually consistent by default.
+
+If the replicated MongoDB deployment only has a single secondary member, a separate daemon called an arbiter must be added to the set. It has the single responsibility of resolving the election of the new primary.[26] As a consequence, an ideal distributed MongoDB deployment requires at least three separate servers, even in the case of just one primary and one secondary.[26]
+
+Load balancing
+MongoDB scales horizontally using sharding.[27] The user chooses a shard key, which determines how the data in a collection will be distributed. The data is split into ranges (based on the shard key) and distributed across multiple shards, which are masters with one or more replicas. Alternatively, the shard key can be hashed to map to a shard – enabling an even data distribution.
+
+MongoDB can run over multiple servers, balancing the load or duplicating data to keep the system functional in case of hardware failure.
+
+File storage
+MongoDB can be used as a file system, called GridFS, with load-balancing and data-replication features over multiple machines for storing files.
+
+This function, called a grid file system,[28] is included with MongoDB drivers. MongoDB exposes functions for file manipulation and content to developers. GridFS can be accessed using the mongofiles utility or plugins for Nginx[29] and lighttpd.[30] GridFS divides a file into parts, or chunks, and stores each of those chunks as a separate document.[31]
+
+Aggregation
+MongoDB provides three ways to perform aggregation: the aggregation pipeline (preferred), the map-reduce function (deprecated as of MongoDB 5.0) and single-purpose aggregation methods.[32]
+
+Map-reduce can be used for batch processing of data and aggregation operations. However, according to MongoDB's documentation, the aggregation pipeline provides better performance for most aggregation operations.[33]
+
+The aggregation framework enables users to obtain results similar to those returned by queries that include the SQL GROUP BY clause. Aggregation operators can be strung together to form a pipeline, analogous to Unix pipes. The aggregation framework includes the $lookup operator, which can join documents from multiple collections, as well as statistical operators such as standard deviation.
+
+Capped collections
+MongoDB supports fixed-size collections called capped collections. This type of collection maintains insertion order and, once the specified size has been reached, behaves like a circular queue.
+
+Transactions
+MongoDB supports multi-document ACID transactions since the 4.0 release in June 2018.[34]
